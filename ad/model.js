@@ -6,9 +6,9 @@ const Ad = db.define(
   "ad",
   {
     title: Sequelize.STRING,
-    description: Sequelize.STRING,
-    url: Sequelize.STRING,
-    price: Sequelize.INTEGER,
+    description: Sequelize.TEXT,
+    url: Sequelize.TEXT,
+    price: Sequelize.DECIMAL,
     email: Sequelize.STRING,
     phone: Sequelize.INTEGER
   },

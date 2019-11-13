@@ -1,6 +1,11 @@
+const cors = require("cors");
 const express = require("express");
 const app = express();
 const port = 4000;
+
+// app. ... can also be chained
+const middleware = cors();
+app.use(middleware);
 
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());

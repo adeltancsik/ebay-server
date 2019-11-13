@@ -4,7 +4,7 @@ const Ad = require("./model");
 const router = new Router();
 
 // find all ads
-router.get("/ads", (request, response, next) => {
+router.get("/ads", (_request, response, next) => {
   Ad.findAll()
     .then(ads => response.json(ads))
     .catch(next);
