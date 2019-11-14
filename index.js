@@ -13,6 +13,9 @@ app.use(bodyParser.json());
 const adRouter = require("./ad/router");
 app.use(adRouter);
 
+const userRouter = require("./user/router");
+app.use(userRouter);
+
 const authRouter = require("./auth/router");
 app.use(authRouter);
 
