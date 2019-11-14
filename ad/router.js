@@ -1,5 +1,6 @@
 const { Router } = require("express");
 const Ad = require("./model");
+const auth = require("../auth/middleware");
 
 const router = new Router();
 
@@ -11,7 +12,7 @@ router.get("/ads", (_request, response, next) => {
 });
 
 // create a new ad
-router.post("/ads", (request, response, next) => {
+router.post("/ads", auth, (request, response, next) => {
   Ad.create(request.body)
     .then(result => response.json(result))
     .catch(next);
