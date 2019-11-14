@@ -13,4 +13,7 @@ app.use(bodyParser.json());
 const adRouter = require("./ad/router");
 app.use(adRouter);
 
+const authRouter = require("./auth/router");
+app.use(authRouter);
+
 app.listen(port, () => console.log(`We are listening on port ${port}!!`));
